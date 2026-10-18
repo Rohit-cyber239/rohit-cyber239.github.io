@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090b">
+<meta name="description" content="DEXE___EDITZ — cinematic edits, reels and visual storytelling.">
+<title>DEXE___EDITZ | Video Editor Portfolio</title>
+<style>
+:root{--bg:#08090b;--card:#111318;--text:#f4f5f6;--muted:#a4a8b1;--line:#292c33;--lime:#c5ff55}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:5;background:#08090beF;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:1.3px;font-size:16px}.logo span{color:var(--lime)}
+.links{display:flex;gap:25px;font-size:13px;color:#c5c7ce}.links a:hover{color:var(--lime)}
+.menu{display:none;background:transparent;color:white;border:1px solid var(--line);border-radius:8px;padding:8px 11px}
+.hero{min-height:650px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:42px;padding:70px 0}
+.badge{display:inline-flex;gap:9px;align-items:center;color:var(--lime);border:1px solid #c5ff5544;border-radius:30px;padding:8px 12px;font-size:10px;text-transform:uppercase;letter-spacing:2px}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--lime);display:inline-block;box-shadow:0 0 12px var(--lime)}
+h1{font-size:clamp(48px,7.5vw,88px);letter-spacing:-5px;line-height:.94;margin:25px 0 22px}
+h1 span{color:var(--lime)}
+.lead{max-width:510px;color:var(--muted);font-size:16px;line-height:1.8}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border:1px solid var(--line);border-radius:8px;font-weight:800;font-size:12px;transition:.2s}
+.btn.primary{background:var(--lime);border-color:var(--lime);color:#11140b}.btn:hover{transform:translateY(-2px)}
+.stats{display:flex;gap:30px;margin-top:38px}.stats strong{display:block;font-size:22px}.stats small{color:var(--muted);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.art{height:440px;position:relative;display:grid;place-items:center}
+.glow{position:absolute;width:290px;height:290px;border-radius:50%;background:radial-gradient(circle,#c5ff5570,transparent 68%);filter:blur(10px)}
+.cover{position:relative;width:min(100%,350px);height:410px;border-radius:16px;border:1px solid #ffffff24;overflow:hidden;background:linear-gradient(145deg,#28311c,#101116 55%,#303b20);box-shadow:0 25px 90px #0009;transform:rotate(2deg)}
+.cover:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 60% 32%,#c5ff5540,transparent 38%),linear-gradient(0deg,#08090bf5,transparent 68%)}
+.cover-top{position:absolute;top:20px;left:20px;right:20px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:2px;color:#d5d7d1}
+.cover-mark{position:absolute;inset:0;display:grid;place-items:center;font-size:78px;font-weight:950;letter-spacing:-8px;color:#ffffff0c;-webkit-text-stroke:1px #ffffff42}
+.cover-bottom{position:absolute;left:23px;bottom:24px}.cover-bottom small{color:var(--lime);letter-spacing:3px;font-size:10px}.cover-bottom h2{font-size:38px;line-height:.95;letter-spacing:-2px;margin:8px 0}
+.float{position:absolute;right:-2px;bottom:30px;background:#15171d;border:1px solid #ffffff25;border-radius:10px;padding:13px 16px;font-size:11px;box-shadow:0 10px 35px #0008}.float b{display:block;color:var(--lime);font-size:15px}
+section{padding:80px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
+.kicker{color:var(--lime);font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:800}
+h2.section-title{font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-2px;margin:10px 0 0}
+.section-top p{max-width:380px;color:var(--muted);font-size:13px;line-height:1.7;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.project{min-height:280px;position:relative;overflow:hidden;border-radius:12px;border:1px solid #ffffff12;background:linear-gradient(145deg,#272a32,#101116);isolation:isolate}
+.project:nth-child(2){background:linear-gradient(145deg,#28361d,#10130d)}.project:nth-child(3){background:linear-gradient(145deg,#302333,#111016)}.project:nth-child(4){background:linear-gradient(145deg,#202c39,#101116)}.project:nth-child(5){background:linear-gradient(145deg,#38291d,#101116)}.project:nth-child(6){background:linear-gradient(145deg,#173132,#101116)}
+.project:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 68% 28%,#c5ff5535,transparent 43%),linear-gradient(0deg,#08090bf2,transparent 75%);z-index:-1}
+.project img,.project video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.num{position:absolute;top:16px;left:17px;font-size:10px;letter-spacing:2px;color:#d1d3d8}
+.symbol{position:absolute;top:45px;left:17px;font-size:45px;opacity:.8}
+.project-info{position:absolute;left:18px;right:18px;bottom:17px}
+.tag{display:inline-block;border:1px solid #ffffff40;border-radius:30px;padding:5px 9px;font-size:9px;margin-bottom:9px;color:#eee}
+.project h3{font-size:20px;margin:0 0 4px}.project p{font-size:11px;color:#c0c2ca;margin:0}
+.note{color:var(--muted);font-size:12px;margin-top:15px}
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px;align-items:center}
+.about-card{padding:30px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#171a1d,#0c0d10)}
+.monogram{font-size:72px;font-weight:950;letter-spacing:-8px;line-height:1;color:var(--lime)}
+.about-card h3{font-size:22px;margin:20px 0 8px}.about-card p,.about-copy p{font-size:13px;line-height:1.8;color:var(--muted)}
+.about-copy h2{font-size:clamp(34px,4vw,50px);line-height:1.02;letter-spacing:-2px;margin:12px 0 20px}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.skills span{border:1px solid var(--line);border-radius:6px;padding:8px 11px;font-size:11px;color:#ddd}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.service{border:1px solid var(--line);border-radius:11px;padding:23px;background:var(--card)}
+.service .icon{font-size:24px;color:var(--lime)}.service h3{font-size:17px;margin:14px 0 7px}.service p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.contact{padding:45px;border-radius:16px;background:var(--lime);color:#10130b;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.contact h2{font-size:clamp(34px,5vw,58px);line-height:1;letter-spacing:-3px;margin:10px 0}
+.contact p{max-width:500px;font-size:13px;line-height:1.7;color:#354025}
+.contact .btn{background:#10130b;color:white;border-color:#10130b;white-space:nowrap}
+footer{padding:25px 0;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:58px 0 35px;gap:15px}.hero-copy{text-align:left}.art{height:390px}.cover{height:355px;width:290px}h1{letter-spacing:-3px}.links{display:none;position:absolute;top:71px;left:0;right:0;background:#0d0e12;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.grid,.services{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr;gap:25px}.section-top{align-items:start;flex-direction:column}.contact{align-items:flex-start;flex-direction:column;padding:30px}}
+@media(max-width:480px){.wrap{width:min(100% - 28px,1120px)}.grid,.services{grid-template-columns:1fr}.project{min-height:260px}.stats{gap:18px}.stats strong{font-size:19px}section{padding:60px 0}.contact h2{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#home">DEXE<span>___</span>EDITZ</a>
+<nav class="links" id="links"><a href="#home">Home</a><a href="#work">Portfolio</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+<button class="menu" id="menu" aria-label="Open navigation">☰</button>
+</div></header>
+<main>
+<div class="wrap hero" id="home">
+<div class="hero-copy">
+<div class="badge"><i></i> Video Editor & Visual Creator</div>
+<h1>VISUALS<br>WITH <span>IMPACT.</span></h1>
+<p class="lead">I turn moments into cinematic stories. Reels, edits and visuals crafted with rhythm, emotion and a signature style.</p>
+<div class="actions"><a class="btn primary" href="#work">EXPLORE MY WORK ↗</a><a class="btn" href="#contact">LET'S CONNECT</a></div>
+<div class="stats"><div><strong>CREATIVE</strong><small>By mindset</small></div><div><strong>CINEMATIC</strong><small>By style</small></div><div><strong>LIMITLESS</strong><small>By vision</small></div></div>
+</div>
+<div class="art"><div class="glow"></div><div class="cover"><div class="cover-top"><span>INDEPENDENT CREATOR</span><span>EST. 20XX</span></div><div class="cover-mark">DX</div><div class="cover-bottom"><small>EDIT • CREATE • REPEAT</small><h2>YOUR VISION.<br>MY FRAME.</h2></div></div><div class="float"><b>DEXE___EDITZ</b>Creative video portfolio</div></div>
+</div>
+<section id="work"><div class="wrap">
+<div class="section-top"><div><div class="kicker">Selected projects</div><h2 class="section-title">THE PORTFOLIO.</h2></div><p>Your work belongs here. Replace these sample cards with your own videos, reels, thumbnails or project links.</p></div>
+<div class="grid">
+<article class="project"><div class="num">PROJECT / 01</div><div class="symbol">▶</div><div class="project-info"><span class="tag">CINEMATIC</span><h3>Cinematic Edits</h3><p>Colour • Rhythm • Atmosphere</p></div></article>
+<article class="project"><div class="num">PROJECT / 02</div><div class="symbol">✳</div><div class="project-info"><span class="tag">SHORT-FORM</span><h3>Reels & Shorts</h3><p>Fast cuts. Strong impact.</p></div></article>
+<article class="project"><div class="num">PROJECT / 03</div><div class="symbol">◈</div><div class="project-info"><span class="tag">MOTION</span><h3>Motion Graphics</h3><p>Movement with purpose.</p></div></article>
+<article class="project"><div class="num">PROJECT / 04</div><div class="symbol">▧</div><div class="project-info"><span class="tag">COLOUR</span><h3>Colour Grading</h3><p>Building a cinematic mood.</p></div></article>
+<article class="project"><div class="num">PROJECT / 05</div><div class="symbol">✦</div><div class="project-info"><span class="tag">MUSIC EDIT</span><h3>Beat Sync Edits</h3><p>Every cut on the beat.</p></div></article>
+<article class="project"><div class="num">PROJECT / 06</div><div class="symbol">↗</div><div class="project-info"><span class="tag">EXPERIMENTAL</span><h3>Creative Experiments</h3><p>Trying something different.</p></div></article>
+</div>
+<p class="note">Portfolio placeholders are examples, not uploaded client projects. Add your own media before sharing the site.</p>
+</div></section>
+<section id="about"><div class="wrap about">
+<div class="about-card"><div class="monogram">DX.</div><h3>Independent Creator.<br>Distinctive Visuals.</h3><p>A creator's portfolio built to showcase the craft, process and final result behind every edit.</p></div>
+<div class="about-copy"><div class="kicker">A little about me</div><h2>MADE TO MAKE<br>YOU <span style="color:var(--lime)">FEEL.</span></h2><p>Hey, I'm DEXE___EDITZ — a video editor focused on cinematic storytelling, short-form content and visual style. I believe an edit should do more than look good: it should make people stop, watch and remember.</p><p>This space is where I'll showcase my latest work and creative experiments.</p><div class="skills"><span>Cinematic Editing</span><span>Reels & Shorts</span><span>Beat Sync</span><span>Colour Grading</span><span>Transitions</span><span>Mobile Editing</span></div></div>
+</div></section>
+<section id="services"><div class="wrap"><div class="section-top"><div><div class="kicker">What I create</div><h2 class="section-title">THE CRAFT.</h2></div><p>Show visitors what you make and what kind of projects they can contact you about.</p></div>
+<div class="services"><div class="service"><div class="icon">◉</div><h3>Cinematic Videos</h3><p>Atmospheric edits, colour moods and story-led visual sequences.</p></div><div class="service"><div class="icon">▸</div><h3>Reels & Shorts</h3><p>Short-form videos designed to hold attention and deliver a clear vibe.</p></div><div class="service"><div class="icon">✳</div><h3>Creative Editing</h3><p>Beat sync, transitions, pacing and motion-driven edits.</p></div></div>
+</div></section>
+<section id="contact"><div class="wrap"><div class="contact"><div><div class="kicker" style="color:#34421e">HAVE A PROJECT IN MIND?</div><h2>LET'S CREATE<br>SOMETHING GREAT.</h2><p>For editing enquiries, collaborations or just to connect, reach out on Instagram.</p></div><a class="btn" href="https://www.instagram.com/dexe___editz/" target="_blank" rel="noopener">MESSAGE ON INSTAGRAM ↗</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> DEXE___EDITZ. All rights reserved.</span><span>BUILT FOR THE LOVE OF EDITING.</span></div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
